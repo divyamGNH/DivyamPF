@@ -1,10 +1,17 @@
 /* Font import */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Questrial&display=swap');
 
+/* Define color variables */
+:root {
+  --defaultBlack: #0E0E0E;
+  --defaultOrange: #E74C3C;
+  --defaultYellow: #C7B99B;
+}
+
 body {
   margin: 0;
   height: 100vh;
-  background-color: #0E0E0E;
+  background-color: var(--defaultBlack);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,8 +42,7 @@ body {
   width: 100vw;
   height: 100vh;
   z-index: 2;
-
-  background-color: #E74C3C;
+  background-color: var(--defaultOrange);
 
   mask-image: url("/mask.svg");
   mask-repeat: no-repeat;
@@ -52,23 +58,23 @@ body {
 .mainHeading {
   font-size: 100px;
   font-weight: 800;
-  color: #C7B99B;
+  color: var(--defaultYellow);
   margin-top: 0;
   line-height: 80px;
 }
 
 .headLine {
   font-size: 16px;
-  color: #C7B99B;
+  color: var(--defaultYellow);
   margin-bottom: 30px;
 }
 
 .ormid {
-  color: #E74C3C;
+  color: var(--defaultOrange);
 }
 
 
-/* Mask Text*/
+/* Mask Text */
 .maskTextWrapper {
   position: absolute;
   padding: 45px;
@@ -106,7 +112,7 @@ body {
 }
 
 .navigation a {
-  color: #C7B99B;
+  color: var(--defaultYellow);
   text-decoration: none;
   font-family: Questrial;
   letter-spacing: -0.8px;
