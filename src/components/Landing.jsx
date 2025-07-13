@@ -11,7 +11,7 @@ function Landing() {
   const size = isHovered? 400 : 40;
 
   return (
-    <div className="container">
+    <div className="container" style={{ height: "100vh", position: "relative" }}>
       <motion.div
         className="mask"
         animate={{

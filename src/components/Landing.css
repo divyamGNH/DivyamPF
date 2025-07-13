@@ -10,14 +10,11 @@
 
 body {
   margin: 0;
-  height: 100vh;
   background-color: var(--defaultBlack);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  /* text-align: center; */
   font-family: 'Questrial', sans-serif;
 }
+
 
 /* .container {
   position: relative;
