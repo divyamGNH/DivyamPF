@@ -1,0 +1,67 @@
+# === Node.js ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# === Environment Variables ===
+.env
+.env.*
+!.env.example
+
+# === Logs ===
+logs/
+*.log
+debug.log*
+*.pid
+*.seed
+*.pid.lock
+
+# === OS / Editor junk ===
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.sublime-*
+
+# === Build & Cache ===
+build/
+dist/
+.next/
+out/
+.cache/
+.vite/
+
+# === MongoDB ===
+data/
+dump/
+mongo-data/
+
+# === Testing & Coverage ===
+coverage/
+jest/
+test-output/
+*.tsbuildinfo
+
+# === Frontend React (if in /client) ===
+client/node_modules/
+client/build/
+client/.env
+client/.cache/
+
+# === Backend Express (if in /server) ===
+server/node_modules/
+server/dist/
+server/.env
+
+# === PM2 & Sessions (if used) ===
+pids/
+sessions/
+*.log
+
+# === Misc ===
+*.tgz
+*.swp
+*.bak
+*.tmp

@@ -1,0 +1,129 @@
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Questrial&display=swap');
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #0E0E0E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Questrial', sans-serif;
+}
+
+/* .container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+} */
+
+/* Overlapping layers */
+.center, .mask {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.center {
+  z-index: 1;
+}
+
+.mask {
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+
+  background-color: #E74C3C;
+
+  mask-image: url("/mask.svg");
+  mask-repeat: no-repeat;
+  mask-position: 0 0;
+
+  /* -webkit-mask-image: url("/mask.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 40px;
+  -webkit-mask-position: 0 0; */
+}
+
+/* Default text */
+.mainHeading {
+  font-size: 100px;
+  font-weight: 800;
+  color: #C7B99B;
+  margin-top: 0;
+  line-height: 80px;
+}
+
+.headLine {
+  font-size: 16px;
+  color: #C7B99B;
+  margin-bottom: 30px;
+}
+
+.ormid {
+  color: #E74C3C;
+}
+
+
+/* Mask Text*/
+.maskTextWrapper {
+  position: absolute;
+  padding: 45px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.maskheadLine {
+  font-size: 16px;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.maskmainHeading {
+  font-size: 100px;
+  font-weight: 800;
+  color: black;
+  margin-top: 0;
+  line-height: 80px;
+}
+
+.maskormid {
+  color: black;
+}
+
+
+/* Navigation */
+.navigation {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  line-height: 1.5;
+}
+
+.navigation a {
+  color: #C7B99B;
+  text-decoration: none;
+  font-family: Questrial;
+  letter-spacing: -0.8px;
+}
+
+
+/* Social Icons */
+.socials {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 40px;
+  left: 15px;
+  gap: 25px;
+}
+
+.socials img {
+  width: 30px;
+  height: 30px;
+}
