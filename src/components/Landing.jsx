@@ -45,17 +45,12 @@ function Landing() {
         </h1>
       </div>
 
-      <div className="navigation">
+      {/* <div className="navigation">
         <a href="#" className="about">ABOUT</a><br />
-        <a href="#" className="works">WORKS</a><br />
+        <a href="#" className="works">PROJECTS</a><br />
         <a href="#" className="contact">CONTACT</a><br />
-      </div>
+      </div> */}
 
-      <div className="socials">
-        <img src="/instagram.png" alt="Instagram" />
-        <img src="/linked in.png" alt="Instagram" />
-        <img src="/git.png" alt="Instagram" />
-      </div>
     </div>
   );
 }

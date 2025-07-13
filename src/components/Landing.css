@@ -115,18 +115,3 @@ body {
   letter-spacing: -0.8px;
 }
 
-
-/* Social Icons */
-.socials {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  bottom: 40px;
-  left: 15px;
-  gap: 25px;
-}
-
-.socials img {
-  width: 30px;
-  height: 30px;
-}
