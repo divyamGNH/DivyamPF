@@ -1,0 +1,30 @@
+/* .mask {
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  background-color: var(--defaultOrange);
+
+  mask-image: url("/mask.svg");
+  mask-repeat: no-repeat;
+  mask-position: 0 0;
+
+  /* -webkit-mask-image: url("/mask.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 40px;
+  -webkit-mask-position: 0 0; */
+/* } */
+
+.mask {
+  position: fixed; 
+  /* top: 0;
+  left: 0; */
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;   /* Very high so it stays above */
+
+  background-color: var(--defaultOrange);
+
+  mask-image: url("/mask.svg");
+  mask-repeat: no-repeat;
+  mask-position: 0 0;
+}

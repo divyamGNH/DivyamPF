@@ -1,3 +1,5 @@
+import MaskLayer from '../components/MaskLayer';
+
 function ProjectBlock(props) {
   return (
     <div>
@@ -19,6 +21,7 @@ function ProjectBlock(props) {
 const TopProjects = () => {
   return (
     <div className="text-[#C7B99B]">
+
       <p className="text-2xl text-[#C7B99B] px-50 mb-10 tracking-widest">PROJECTS</p>
       <div>
         <hr className="opacity-30" />

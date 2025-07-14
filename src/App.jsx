@@ -4,11 +4,16 @@ import TopProjects from "./pages/TopProjects.jsx";
 import Socials from "./pages/Socials.jsx";
 import Navigations from "./pages/Navigations.jsx";
 import { MouseProvider } from "./Context/MouseContext.jsx";
-// import CursorFollower from "./components/CursorFollower.jsx";
+import CursorFollower from "./components/CursorFollower.jsx"; // make sure this path is correct
+
+import "./App.css";
 
 function App() {
   return (
     <MouseProvider>
+      {/* CursorFollower is now global and rendered ONCE */}
+      {/* <CursorFollower /> */}
+
       <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
         <Socials />
         <Navigations />

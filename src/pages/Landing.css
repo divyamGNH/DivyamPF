@@ -15,7 +15,7 @@ body {
 }
 
 /* Overlapping layers */
-.center, .mask {
+.center{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -25,22 +25,6 @@ body {
 
 .center {
   z-index: 1;
-}
-
-.mask {
-  width: 100vw;
-  height: 100vh;
-  z-index: 2;
-  background-color: var(--defaultOrange);
-
-  mask-image: url("/mask.svg");
-  mask-repeat: no-repeat;
-  mask-position: 0 0;
-
-  /* -webkit-mask-image: url("/mask.svg");
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: 40px;
-  -webkit-mask-position: 0 0; */
 }
 
 /* Default text */
@@ -89,21 +73,5 @@ body {
 
 .maskormid {
   color: black;
-}
-
-
-/* Navigation */
-.navigation {
-  position: absolute;
-  top: 40px;
-  right: 40px;
-  line-height: 1.5;
-}
-
-.navigation a {
-  color: var(--defaultYellow);
-  text-decoration: none;
-  font-family: Questrial;
-  letter-spacing: -0.8px;
 }
 

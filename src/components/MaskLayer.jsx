@@ -9,8 +9,8 @@ const MaskLayer= ({children})=>{
     <motion.div
       className="mask"
       animate={{
-        WebkitMaskPosition: `${x - size / 2}px ${y - size / 2}px`,
-        MaskPosition: `${x - size / 2}px ${y - size / 2}`,
+        WebkitMaskPosition: `${x - size/2}px ${y - size/2}px`,
+        MaskPosition: `${x - size/2}px ${y - size/2}`,
         WebkitMaskSize: `${size}px`,
       }}
       transition={{ type: "tween", ease: "backOut" }}
