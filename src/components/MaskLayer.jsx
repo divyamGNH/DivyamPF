@@ -8,6 +8,7 @@ const MaskLayer= ({children})=>{
   return (
     <motion.div
       className="mask"
+      style={{ backgroundColor: "#E74C3C" }}
       animate={{
         WebkitMaskPosition: `${x - size/2}px ${y - size/2}px`,
         MaskPosition: `${x - size/2}px ${y - size/2}`,

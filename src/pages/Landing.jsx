@@ -1,36 +1,43 @@
-'use client';
-import './Landing.css';
-import { useContext } from 'react';
-import { MouseContext } from '../Context/MouseContext.jsx';
-import MaskLayer from '../components/MaskLayer'; // adjust path if needed
+"use client";
+import { useContext } from "react";
+import { MouseContext } from "../Context/MouseContext.jsx";
+import MaskLayer from "../components/MaskLayer";
 
 function Landing() {
   const { setIsHovered } = useContext(MouseContext);
 
   return (
-    <div className="container" style={{ height: "100vh", position: "relative" }}>
+    <div
+      className="relative h-screen w-full font-[Questrial] bg-[#0E0E0E]"
+    >
       <MaskLayer>
         <div
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          className="maskTextWrapper"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center p-[45px]"
         >
-          <p className="maskheadLine">DIVYAM</p>
-          <h1 className="maskmainHeading">
-            HIDING <br />
-            <span className="maskormid">BAD <br /> SHIT</span><br />
-            SINCE<br />
-            2006
-          </h1>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+            <p className="text-[16px] text-black mb-[30px]">DIVYAM</p>
+            <h1 className="text-[100px] font-extrabold text-black mt-0 leading-[80px]">
+              <span className="text-black">HIDING</span> <br />
+              <span className="text-black">BAD <br /> SHIT</span>
+              <br />
+              <span className="text-black">SINCE</span>
+              <br />
+              <span className="text-black">2006</span>
+            </h1>
+          </div>
         </div>
       </MaskLayer>
 
-      <div className="center">
-        <p className="headLine">DIVYAM</p>
-        <h1 className="mainHeading">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-[1]">
+        <p className="text-[16px] text-[#C7B99B] mb-[30px]">DIVYAM</p>
+        <h1 className="text-[100px] font-extrabold text-[#C7B99B] mt-0 leading-[80px]">
           MAKING <br />
-          <span className="ormid">GOOD <br /> SHIT</span><br />
-          SINCE<br />
+          <span className="text-[#E74C3C]">GOOD <br /> SHIT</span>
+          <br />
+          SINCE
+          <br />
           2006
         </h1>
       </div>

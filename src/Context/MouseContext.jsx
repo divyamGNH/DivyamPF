@@ -6,7 +6,8 @@ export function MouseProvider({ children }) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
 
-  const size = isHovered ? 400 : 40;
+  // const size = isHovered ? 400 : 40;
+  const size = 400;
 
   useEffect(() => {
     const update = (e) => {
@@ -21,7 +22,8 @@ export function MouseProvider({ children }) {
   }, []);
 
   return (
-    <MouseContext.Provider value={{ ...position, size, setIsHovered }}>
+    // add setIsHovered here also
+    <MouseContext.Provider value={{ ...position, size }}>
       {children}
     </MouseContext.Provider>
   );
