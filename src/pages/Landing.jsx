@@ -20,11 +20,11 @@ function Landing() {
             <p className="text-[16px] text-black mb-[30px]">DIVYAM</p>
             <h1 className="text-[100px] font-extrabold text-black mt-0 leading-[80px]">
               <span className="text-black">HIDING</span> <br />
-              <span className="text-black">BAD <br /> SHIT</span>
+              <span className="text-black">BAD <br /> CODE</span>
               <br />
               <span className="text-black">SINCE</span>
               <br />
-              <span className="text-black">2006</span>
+              <span className="text-black">2024</span>
             </h1>
           </div>
         </div>
@@ -34,11 +34,11 @@ function Landing() {
         <p className="text-[16px] text-[#C7B99B] mb-[30px]">DIVYAM</p>
         <h1 className="text-[100px] font-extrabold text-[#C7B99B] mt-0 leading-[80px]">
           MAKING <br />
-          <span className="text-[#E74C3C]">GOOD <br /> SHIT</span>
+          <span className="text-[#E74C3C]">GOOD <br /> CODE</span>
           <br />
           SINCE
           <br />
-          2006
+          2024
         </h1>
       </div>
     </div>

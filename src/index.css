@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Questrial&display=swap');
+@import "tailwindcss";
 
 body {
   margin: 0;

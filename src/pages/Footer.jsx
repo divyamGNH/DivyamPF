@@ -2,25 +2,25 @@ import React from "react";
 
 function Footer() {
   return (
-    <div>
-      <div className="text-[#C7B99B] px-50 mb-10">
-        <p className="text-[#C7B99B] mb-10">CONNECT</p>
+    <div id="footer">
+      <div className="text-[#C7B99B] px-50 mb-10 text-base">
+        <p className="text-[#C7B99B] mb-10 text-base">CONNECT</p>
         <div className="flex flex-row justify-between">
           <div className="flex flex-col justify-center text-center">
-            <a href="">Instagram</a>
-            <a href="">Instagram</a>
-            <a href="">Instagram</a>
+            <a href="" className="text-base">Instagram</a>
+            <a href="" className="text-base">Instagram</a>
+            <a href="" className="text-base">Instagram</a>
           </div>
 
           <div className="flex flex-col">
-            <a href="">Instagram</a>
-            <a href="">Instagram</a>
-            <a href="">Instagram</a>
+            <a href="" className="text-base">Instagram</a>
+            <a href="" className="text-base">Instagram</a>
+            <a href="" className="text-base">Instagram</a>
           </div>
 
           <div className="flex flex-col">
-            <p>Email</p>
-            <p>Phone</p>
+            <p className="text-base">Email</p>
+            <p className="text-base">Phone</p>
           </div>
         </div>
       </div>

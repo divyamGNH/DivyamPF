@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 // import Contact from "./pages/Contact"; // Another example
 import "./App.css";
 import { MouseProvider } from "./Context/MouseContext.jsx";
+import About from "./pages/About.jsx";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           {/* <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} /> */}
         </Routes>
