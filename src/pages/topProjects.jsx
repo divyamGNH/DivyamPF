@@ -22,7 +22,7 @@ const TopProjects = () => {
   return (
     <div className="text-[#C7B99B]">
 
-      <p className="text-2xl text-[#C7B99B] px-50 mb-10 tracking-widest">PROJECTS</p>
+      <p className="text-2xl text-[#C7B99B] px-50 mb-10 tracking-widest">TOP PROJECTS</p>
       <div>
         <hr className="opacity-30" />
         <ProjectBlock name="NAME" link="https://youtube.com" />

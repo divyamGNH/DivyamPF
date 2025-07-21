@@ -32,28 +32,57 @@ const TechStack = () => {
     {
       name: "FrontEnd",
       icons: [
-        { src: "/github.svg", link: "https://github.com/react", alt: "GitHub" }, //html
-        { src: "/github.svg", link: "https://github.com/react", alt: "GitHub" }, //css
-        { src: "/github.svg", link: "https://github.com/react", alt: "GitHub" }, //js
-        { src: "/github.svg", link: "https://github.com/react", alt: "GitHub" }, //framer
-        { src: "/github.svg", link: "https://github.com/react", alt: "GitHub" }, //react
+        { src: "/reactIcon.svg", link: "https://reactjs.org/", alt: "React" },
+        { src: "/jsIcon.svg", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", alt: "JavaScript" },
+        { src: "/framerIcon.svg", link: "https://www.framer.com/motion/", alt: "Framer Motion" },
+        { src: "/cssIcon.svg", link: "https://developer.mozilla.org/en-US/docs/Web/CSS", alt: "CSS" },
+        { src: "/htmlIcon.svg", link: "https://developer.mozilla.org/en-US/docs/Web/HTML", alt: "HTML" },
       ],
     },
     {
       name: "BackEnd",
       icons: [
-        { src: "/github.svg", link: "https://github.com/nodejs", alt: "GitHub" }, //node
-        { src: "/github.svg", link: "https://github.com/react", alt: "GitHub" }, //express
-        { src: "/github.svg", link: "https://github.com/react", alt: "GitHub" }, //nodemailer
-        { src: "/github.svg", link: "https://github.com/react", alt: "GitHub" }, //npm
-        { src: "/github.svg", link: "https://github.com/react", alt: "GitHub" }, //axios
+        { src: "/nodeIcon.svg", link: "https://nodejs.org/", alt: "Node.js" },
+        { src: "/expressIcon.svg", link: "https://expressjs.com/", alt: "Express.js" },
+        { src: "/npmIcon.svg", link: "https://www.npmjs.com/", alt: "npm" },
       ],
     },
     {
       name: "Design",
       icons: [
-        { src: "/github.svg", link: "https://github.com/nodejs", alt: "GitHub" }, //node
-        { src: "/github.svg", link: "https://github.com/react", alt: "GitHub" }, //Figma
+        { src: "/figmaIcon.svg", link: "https://www.figma.com/", alt: "Figma" },
+        { src: "/canvaIcon.svg", link: "https://www.canva.com/", alt: "Canva" },
+      ],
+    },
+    {
+      name: "DataBases",
+      icons: [
+        { src: "/mongodbIcon.svg", link: "https://www.mongodb.com/", alt: "MongoDB" },
+        { src: "/postgresIcon.svg", link: "https://www.postgresql.org/", alt: "PostgreSQL" },
+      ],
+    },
+    {
+      name: "Version Control",
+      icons: [
+        { src: "/github.svg", link: "https://github.com/", alt: "GitHub" },
+        { src: "/gitIcon.svg", link: "https://git-scm.com/", alt: "Git" },
+      ],
+    },
+    {
+      name: "Languages",
+      icons: [
+        { src: "/javaIcon.svg", link: "https://www.oracle.com/java/", alt: "Java" },
+        { src: "/pythonIcon.svg", link: "https://www.python.org/", alt: "Python" },
+        { src: "/jsIcon.svg", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", alt: "JavaScript" },
+        { src: "/cppIcon.svg", link: "https://isocpp.org/", alt: "C++" },
+      ],
+    },
+    {
+      name: "Libraries",
+      icons: [
+        { src: "/numpyIcon.svg", link: "https://numpy.org/", alt: "NumPy" },
+        { src: "/pandasIcon.svg", link: "https://pandas.pydata.org/", alt: "Pandas" },
+        { src: "/matplotlibIcon.svg", link: "https://matplotlib.org/", alt: "Matplotlib" },
       ],
     },
     

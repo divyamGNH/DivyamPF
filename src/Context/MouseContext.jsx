@@ -23,7 +23,7 @@ export function MouseProvider({ children }) {
 
   return (
     // add setIsHovered here also
-    <MouseContext.Provider value={{ ...position, size }}>
+    <MouseContext.Provider value={{ ...position, size,isHovered }}>
       {children}
     </MouseContext.Provider>
   );
