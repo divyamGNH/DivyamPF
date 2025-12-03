@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About.jsx";
 
 import useMouseTracking from "./Hooks/useMouseTracking.js";
-import CursorFollower from "./components/CursorFollower.jsx";
+// import CursorFollower from "./components/CursorFollower.jsx";
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
   return (
     // <MouseProvider>
       <Router>
-        <CursorFollower/>
+        {/* <CursorFollower/> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

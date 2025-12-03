@@ -1,6 +1,7 @@
 // CursorFollower.jsx
 import { motion } from 'framer-motion';
 import useMouseStore from '../Store/useMouseStore.js';
+// import useMouseStore from '../Store/useMouseStor';
 
 const CursorFollower = () => {
   const x = useMouseStore(state => state.x);

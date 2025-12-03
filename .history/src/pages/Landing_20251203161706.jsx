@@ -1,7 +1,7 @@
 "use client";
 // import { useContext } from "react";
 // import { MouseContext } from "../Context/MouseContext.jsx";
-import MaskLayer from "../components/MaskLayer";
+// import MaskLayer from "../components/MaskLayer";
 
 function Landing() {
   // const { setIsHovered } = useContext(MouseContext);

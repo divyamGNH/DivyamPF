@@ -1,6 +1,6 @@
 "use client";
 // import { useContext } from "react";
-// import { MouseContext } from "../Context/MouseContext.jsx";
+import { MouseContext } from "../Context/MouseContext.jsx";
 import MaskLayer from "../components/MaskLayer";
 
 function Landing() {
@@ -10,7 +10,7 @@ function Landing() {
     <div
       className="relative h-screen w-full font-[Questrial] bg-[#0E0E0E]"
     >
-      {/* <MaskLayer>
+      <MaskLayer>
         <div
           // onMouseEnter={() => setIsHovered(true)}
           // onMouseLeave={() => setIsHovered(false)}
@@ -28,7 +28,7 @@ function Landing() {
             </h1>
           </div>
         </div>
-      </MaskLayer> */}
+      </MaskLayer>
 
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-[1]">
         <p className="text-[16px] text-[#C7B99B] mb-[30px]">DIVYAM</p>

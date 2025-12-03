@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-// import { useMouse } from "../Context/MouseContext.jsx";
+import { useMouse } from "../Context/MouseContext.jsx";
 import "./MaskLayer.css";
 import useMouseStore from "../Store/useMouseStore.js";
 

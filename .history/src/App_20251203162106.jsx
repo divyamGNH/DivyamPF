@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import Home from "./pages/Home";
-// import { MouseProvider } from "./Context/MouseContext.jsx";
+import { MouseProvider } from "./Context/MouseContext.jsx";
 import About from "./pages/About.jsx";
 
 import useMouseTracking from "./Hooks/useMouseTracking.js";
@@ -14,7 +14,7 @@ function App() {
   useMouseTracking();
   
   return (
-    // <MouseProvider>
+    <MouseProvider>
       <Router>
         <CursorFollower/>
         <Routes>

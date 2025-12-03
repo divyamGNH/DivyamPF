@@ -1,6 +1,6 @@
 "use client";
 // import { useContext } from "react";
-import { MouseContext } from "../Context/MouseContext.jsx";
+// import { MouseContext } from "../Context/MouseContext.jsx";
 import MaskLayer from "../components/MaskLayer.jsx";
 
 function AboutLanding() {

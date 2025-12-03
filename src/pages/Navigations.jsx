@@ -1,40 +1,30 @@
+import { animate } from "framer-motion";
+
 const Navigations = () => {
+  const handleScroll = () => {
+    const footer = document.getElementById("footer");
+    if (footer) {
+      const targetY = footer.getBoundingClientRect().top + window.pageYOffset;
+
+      animate(window.scrollY, targetY, {
+        duration: 1.2,
+        ease: [0.42, 0, 0.58, 1], // easeInOut (cubic-bezier curve)
+
+        //This line actually carries the animation visually like updates the animation frame by frame.
+        onUpdate: (latest) => window.scrollTo(0, latest),
+      });
+    }
+  };
+
   return (
     <div className="text-[#C7B99B]">
       <div className="fixed flex flex-col tracking-tighter right-10 top-10 gap-0.8 z-50">
         <a href="/">HOME</a>
         <a href="/about">ABOUT</a>
         <a href="/projects">PROJECTS</a>
-        <a
-          href="#footer"
-          onClick={e => {
-            e.preventDefault();
-            const footer = document.getElementById('footer');
-            if (footer) {
-              // Custom smooth scroll with slower speed
-              const targetY = footer.getBoundingClientRect().top + window.pageYOffset;
-              const startY = window.pageYOffset;
-              const distance = targetY - startY;
-              const duration = 1200; // 1.2 seconds
-              let startTime = null;
-
-              function animateScroll(currentTime) {
-                if (!startTime) startTime = currentTime;
-                const timeElapsed = currentTime - startTime;
-                const progress = Math.min(timeElapsed / duration, 1);
-                // Ease in-out
-                const ease = progress < 0.5
-                  ? 2 * progress * progress
-                  : -1 + (4 - 2 * progress) * progress;
-                window.scrollTo(0, startY + distance * ease);
-                if (timeElapsed < duration) {
-                  requestAnimationFrame(animateScroll);
-                }
-              }
-              requestAnimationFrame(animateScroll);
-            }
-          }}
-        >CONTACT</a>
+        <a onClick={ handleScroll}>
+          CONTACT
+        </a>
       </div>
     </div>
   );
