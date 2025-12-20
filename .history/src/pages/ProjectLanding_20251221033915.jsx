@@ -110,7 +110,7 @@ const ProjectLanding = () => {
     <>
       {/* POPUP */}
       {showPopup && (
-        <div className="fixed inset-0 flex items-end justify-center pointer-events-none z-100">
+        <div className="fixed inset-0 z-50 flex items-end justify-center pointer-events-none z-100">
           <div
             className="
               mb-10
