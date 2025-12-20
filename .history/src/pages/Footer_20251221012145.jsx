@@ -13,18 +13,17 @@ function Footer() {
 
         {/* SOCIAL ICONS */}
         <div className="flex items-center gap-4">
-          <a href="https://www.instagram.com/divvvvvyam/" className="hover:opacity-80 transition" target="_blank" rel="noopener noreferrer">
+          <a href="#" className="hover:opacity-80 transition">
             <img src="./instaIcon.svg" alt="Instagram" className="w-7 h-7" />
           </a>
 
-          <a href="https://www.linkedin.com/in/divyam-khandelwal-b54594338/" className="hover:opacity-80 transition" target="_blank" rel="noopener noreferrer">
+          <a href="#" className="hover:opacity-80 transition">
             <img src="./linkedinIcon.svg" alt="LinkedIn" className="w-7 h-7" />
           </a>
 
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=divyamproff1521@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition">
+          <a href="mailto:divyamproff1521@gmail.com" onClick={() => alert("clicked")} className="hover:opacity-80 transition">
             <img src="./gmailIcon.svg" alt="Email" className="w-7 h-7" />
           </a>
-
         </div>
 
         {/* FOOTER NOTE */}

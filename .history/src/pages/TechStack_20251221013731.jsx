@@ -1,19 +1,18 @@
 // Helper function to render icons
 function renderIcons(icons) {
   return icons.map((icon, index) => (
-    <div
+    <a
       key={index}
-      className="
-        h-10 w-10 sm:h-12 sm:w-12
-        flex items-center justify-center
-      "
+      href={icon.link}
+      target="_blank"
+      rel="noopener noreferrer"
     >
       <img
         src={icon.src}
         alt={icon.alt || "icon"}
-        className="h-full w-full object-contain"
+        className="h-10 w-10 sm:h-12 sm:w-12"
       />
-    </div>
+    </a>
   ));
 }
 
@@ -57,58 +56,67 @@ const TechStack = () => {
     {
       name: "Languages",
       icons: [
-        { src: "/jsIcon.svg", alt: "JavaScript" },
-        { src: "/tsIcon.svg", alt: "TypeScript" },
-        { src: "/javaIcon.svg", alt: "Java" },
-        { src: "/cppIcon.svg", alt: "C++" },
+        { src: "/jsIcon.svg", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", alt: "JavaScript" },
+        { src: "/javaIcon.svg", link: "https://www.oracle.com/java/", alt: "Java" },
+        { src: "/cppIcon.svg", link: "https://isocpp.org/", alt: "C++" },
       ],
     },
     {
       name: "Frontend",
       icons: [
-        { src: "/reactIcon.svg", alt: "React" },
-        { src: "/tailwindIcon.svg", alt: "HTML" },
-        { src: "/framerIcon.svg", alt: "Framer Motion" },
-        { src: "/cssIcon.svg", alt: "CSS" },
-        { src: "/htmlIcon.svg", alt: "HTML" },
+        { src: "/reactIcon.svg", link: "https://reactjs.org/", alt: "React" },
+        { src: "/framerIcon.svg", link: "https://www.framer.com/motion/", alt: "Framer Motion" },
+        { src: "/cssIcon.svg", link: "https://developer.mozilla.org/en-US/docs/Web/CSS", alt: "CSS" },
+        { src: "/htmlIcon.svg", link: "https://developer.mozilla.org/en-US/docs/Web/HTML", alt: "HTML" },
       ],
     },
     {
       name: "Backend",
       icons: [
-        { src: "/nodeIcon.svg", alt: "Node.js" },
-        { src: "/expressIcon.svg", alt: "Express.js" },
-        { src: "/socketioIcon.svg", alt: "Socket.io" },
-        { src: "/webRTCIcon.svg", alt: "WebRTC" },
+        { src: "/nodeIcon.svg", link: "https://nodejs.org/", alt: "Node.js" },
+        { src: "/expressIcon.svg", link: "https://expressjs.com/", alt: "Express.js" },
+        { src: "/npmIcon.svg", link: "https://www.npmjs.com/", alt: "npm" },
+        { src: "/socketioIcon.svg", link: "https://www.npmjs.com/", alt: "Socket.io" },
+        { src: "/webRTCIcon.svg", link: "https://www.npmjs.com/", alt: "webRTC" },
       ],
     },
     {
       name: "Design",
       icons: [
-        { src: "/figmaIcon.svg", alt: "Figma" },
-        { src: "/canvaIcon.svg", alt: "Canva" },
+        { src: "/figmaIcon.svg", link: "https://www.figma.com/", alt: "Figma" },
+        { src: "/canvaIcon.svg", link: "https://www.canva.com/", alt: "Canva" },
       ],
     },
     {
       name: "Databases",
       icons: [
-        { src: "/mongodbIcon.svg", alt: "MongoDB" },
-        { src: "/postgresIcon.svg", alt: "PostgreSQL" },
+        { src: "/mongodbIcon.svg", link: "https://www.mongodb.com/", alt: "MongoDB" },
+        { src: "/postgresIcon.svg", link: "https://www.postgresql.org/", alt: "PostgreSQL" },
       ],
     },
     {
       name: "Version Control",
       icons: [
-        { src: "/github.svg", alt: "GitHub" },
-        { src: "/gitIcon.svg", alt: "Git" },
+        { src: "/github.svg", link: "https://github.com/", alt: "GitHub" },
+        { src: "/gitIcon.svg", link: "https://git-scm.com/", alt: "Git" },
       ],
     },
+    // {
+    //   name: "Libraries",
+    //   icons: [
+    //     { src: "/numpyIcon.svg", link: "https://numpy.org/", alt: "NumPy" },
+    //     { src: "/pandasIcon.svg", link: "https://pandas.pydata.org/", alt: "Pandas" },
+    //     { src: "/matplotlibIcon.svg", link: "https://matplotlib.org/", alt: "Matplotlib" },
+    //   ],
+    // },
   ];
 
   return (
     <div className="relative w-full max-w-full overflow-x-hidden bg-[#0E0E0E] text-[#C7B99B]">
+
       {/* SCALE WRAPPER (phone only) */}
       <div className="scale-[0.85] sm:scale-100 origin-top">
+
         {/* SECTION TITLE */}
         <p
           className="

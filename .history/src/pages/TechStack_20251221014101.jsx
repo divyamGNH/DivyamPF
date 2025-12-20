@@ -67,7 +67,6 @@ const TechStack = () => {
       name: "Frontend",
       icons: [
         { src: "/reactIcon.svg", alt: "React" },
-        { src: "/tailwindIcon.svg", alt: "HTML" },
         { src: "/framerIcon.svg", alt: "Framer Motion" },
         { src: "/cssIcon.svg", alt: "CSS" },
         { src: "/htmlIcon.svg", alt: "HTML" },
@@ -78,6 +77,7 @@ const TechStack = () => {
       icons: [
         { src: "/nodeIcon.svg", alt: "Node.js" },
         { src: "/expressIcon.svg", alt: "Express.js" },
+        { src: "/npmIcon.svg", alt: "npm" },
         { src: "/socketioIcon.svg", alt: "Socket.io" },
         { src: "/webRTCIcon.svg", alt: "WebRTC" },
       ],

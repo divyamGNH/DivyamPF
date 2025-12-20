@@ -2,7 +2,7 @@ function Footer() {
   return (
     <div
       id="footer"
-      className="relative w-full max-w-full overflow-x-hidden bg-[#0E0E0E] text-[#C7B99B] py-16 z-1000"
+      className="relative w-full max-w-full overflow-x-hidden bg-[#0E0E0E] text-[#C7B99B] py-16 z-51"
     >
       <div className="flex flex-col items-center text-center gap-5">
 
@@ -13,18 +13,17 @@ function Footer() {
 
         {/* SOCIAL ICONS */}
         <div className="flex items-center gap-4">
-          <a href="https://www.instagram.com/divvvvvyam/" className="hover:opacity-80 transition" target="_blank" rel="noopener noreferrer">
+          <a href="#" className="hover:opacity-80 transition">
             <img src="./instaIcon.svg" alt="Instagram" className="w-7 h-7" />
           </a>
 
-          <a href="https://www.linkedin.com/in/divyam-khandelwal-b54594338/" className="hover:opacity-80 transition" target="_blank" rel="noopener noreferrer">
+          <a href="#" className="hover:opacity-80 transition">
             <img src="./linkedinIcon.svg" alt="LinkedIn" className="w-7 h-7" />
           </a>
 
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=divyamproff1521@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition">
-            <img src="./gmailIcon.svg" alt="Email" className="w-7 h-7" />
+          <a href="#" className="hover:opacity-80 transition">
+            <img src="./linkedinIcon.svg" alt="Email" className="w-7 h-7" />
           </a>
-
         </div>
 
         {/* FOOTER NOTE */}

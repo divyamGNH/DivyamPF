@@ -59,7 +59,7 @@ const TopProjects = () => {
         <div>
           <hr className="opacity-30 mx-6 sm:mx-10 md:mx-16 lg:mx-24" />
 
-          <ProjectBlock name="CONNECTLY" link="https://github.com/divyamGNH/Connectly" />
+          <ProjectBlock name="CONNECTLY" link="https://youtube.com" />
           {/* <ProjectBlock name="NAME" link="https://youtube.com" />
           <ProjectBlock name="NAME" link="https://youtube.com" />
           <ProjectBlock name="NAME" link="https://youtube.com" /> */}

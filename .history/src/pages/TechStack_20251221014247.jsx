@@ -67,7 +67,6 @@ const TechStack = () => {
       name: "Frontend",
       icons: [
         { src: "/reactIcon.svg", alt: "React" },
-        { src: "/tailwindIcon.svg", alt: "HTML" },
         { src: "/framerIcon.svg", alt: "Framer Motion" },
         { src: "/cssIcon.svg", alt: "CSS" },
         { src: "/htmlIcon.svg", alt: "HTML" },
