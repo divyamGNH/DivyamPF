@@ -1,0 +1,14 @@
+import { create } from "zustand";
+
+const useMouseStore = create((set) => ({
+  // State
+  x: -100,
+  y: -100,
+  hover: false,   // NEW BOOLEAN STATE
+
+  // Actions
+  setPosition: (x, y) => set({ x, y }),
+  setHover: (value) => set({ hover: value }),  // NEW ACTION
+}));
+
+export default useMouseStore;
