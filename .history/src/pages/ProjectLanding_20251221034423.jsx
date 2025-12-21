@@ -197,7 +197,7 @@ const ProjectLanding = () => {
             ]}
             stack="React Native · Expo · Node · REST APIs"
             liveLink="—"
-            githubLink="https://github.com/divyamGNH/Contestify"
+            githubLink="https://github.com/divyamGNH/ContestReminder"
             onUnavailableClick={() => setShowPopup(true)}
           />
         </div>

@@ -28,7 +28,9 @@ function App() {
   }, []);
 
   // only track mouse if cursor is enabled
-  useMouseTracking();
+  if (enableCursor) {
+    useMouseTracking();
+  }
 
   return (
     <Router>

@@ -8,7 +8,9 @@ const Navigations = () => {
 
       animate(window.scrollY, targetY, {
         duration: 1.2,
-        ease: [0.42, 0, 0.58, 1],
+        ease: [0.42, 0, 0.58, 1], // easeInOut (cubic-bezier curve)
+
+        //This line actually carries the animation visually like updates the animation frame by frame.
         onUpdate: (latest) => window.scrollTo(0, latest),
       });
     }
@@ -23,7 +25,7 @@ const Navigations = () => {
         <a onClick={ handleScroll}>
           CONTACT
         </a>
-        <a href="./Divyam-Resume.pdf" target="_blank" rel="noopener norefferer">RESUME</a>
+        <a href="./resume.pdf" target="_blank" rel="noopener norefferer">RESUME</a>
       </div>
     </div>
   );

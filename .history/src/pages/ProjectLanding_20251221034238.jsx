@@ -188,8 +188,8 @@ const ProjectLanding = () => {
           <System
             status="IN PROGRESS"
             statusColor="bg-yellow-500"
-            title="Contest Reminder Mobile Application"
-            name="CONTESTIFY"
+            title="Mobile Application"
+            name="CONTEST REMINDER"
             details={[
               "Automated coding contest alerts",
               "Native alarms & notifications",
@@ -197,7 +197,7 @@ const ProjectLanding = () => {
             ]}
             stack="React Native · Expo · Node · REST APIs"
             liveLink="—"
-            githubLink="https://github.com/divyamGNH/Contestify"
+            githubLink="https://github.com/divyamGNH/ContestReminder"
             onUnavailableClick={() => setShowPopup(true)}
           />
         </div>
