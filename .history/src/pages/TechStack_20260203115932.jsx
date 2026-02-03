@@ -85,12 +85,6 @@ const TechStack = () => {
       ],
     },
     {
-      name: "Full Stack",
-      icons: [
-        { src: "/nextIcon.svg", alt: "NEXTjs" },
-      ],
-    },
-    {
       name: "Design",
       icons: [
         { src: "/figmaIcon.svg", alt: "Figma" },

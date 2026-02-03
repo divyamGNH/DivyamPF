@@ -17,8 +17,8 @@ const MaskLayer = ({ children }) => {
       }}
       transition={{
         WebkitMaskSize: {
-          duration: hover ? 0.35 : 0.45, // slower shrink
-          ease: hover ? "easeOut" : "easeInOut",
+          duration: 0.35,   // slows size change
+          ease: "easeOut",
         },
         default: {
           type: "tween",

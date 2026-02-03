@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 import MaskLayer from "../components/MaskLayer";
 import useMouseStore from "../Store/useMouseStore";
 
+/* ===== Framer Motion Variants ===== */
 
+// Each line controls only its letters
 const line = {
   hidden: {},
   visible: {
@@ -13,6 +15,7 @@ const line = {
   },
 };
 
+// Each letter rises from below its final position
 const letter = {
   hidden: {
     opacity: 0,
@@ -28,6 +31,7 @@ const letter = {
   },
 };
 
+// Helper component for animated text line
 const AnimatedLine = ({ text, className = "" }) => {
   return (
     <motion.div
@@ -75,16 +79,20 @@ function Landing() {
     <div className="relative min-h-[100svh] w-full overflow-x-hidden font-[Questrial] bg-[#0E0E0E]">
       {enableHover ? (
         <MaskLayer>
+          {/* POSITIONING WRAPPER (NO HOVER, NO PADDING) */}
           <div
             className="relative flex justify-center top-1/2 left-1/2 
               -translate-x-1/2 -translate-y-1/2 z-1"
           >
+            {/* HOVER WRAPPER (TIGHT HITBOX) */}
             <div
               onMouseEnter={enableHover ? () => setHover(true) : undefined}
               onMouseLeave={enableHover ? () => setHover(false) : undefined}
               className="inline-block"
             >
+              {/* VISUAL PADDING ONLY */}
               <div className="p-6 sm:p-10 md:p-16">
+                {/* ===== MASKED TEXT ===== */}
                 <div className="text-center">
                   <AnimatedLine
                     text="DIVYAM"
@@ -111,6 +119,7 @@ function Landing() {
         </MaskLayer>
       ) : null}
 
+      {/* ===== VISIBLE TEXT ===== */}
       <div
         className="absolute top-1/2 left-1/2 
           -translate-x-1/2 -translate-y-1/2 

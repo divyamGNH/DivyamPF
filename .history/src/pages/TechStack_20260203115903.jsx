@@ -78,16 +78,11 @@ const TechStack = () => {
       name: "Backend",
       icons: [
         { src: "/nodeIcon.svg", alt: "Node.js" },
+        { src: "/expressIcon.svg", alt: "Express.js" },
         { src: "/socketioIcon.svg", alt: "Socket.io" },
         { src: "/webRTCIcon.svg", alt: "WebRTC" },
         { src: "/zodIcon.svg", alt: "Zod" },
-        { src: "/trpcIcon.svg", alt: "tRPC" },
-      ],
-    },
-    {
-      name: "Full Stack",
-      icons: [
-        { src: "/nextIcon.svg", alt: "NEXTjs" },
+        { src: "/trpcIcon.svg", alt: "TRPC" },
       ],
     },
     {

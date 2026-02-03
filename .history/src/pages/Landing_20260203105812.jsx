@@ -3,31 +3,35 @@ import { motion } from "framer-motion";
 import MaskLayer from "../components/MaskLayer";
 import useMouseStore from "../Store/useMouseStore";
 
+/* ===== Framer Motion Variants ===== */
 
+// Each line controls its own letters
 const line = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.12,
+      staggerChildren: 0.08, // ⬅ slower letter delay
     },
   },
 };
 
+// Each letter
 const letter = {
   hidden: {
     opacity: 0,
-    y: 40,
+    y: 12, // ⬅ less jump = smoother
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1.25,
-      ease: [0.16, 1, 0.3, 1],
+      duration: 0.7, // ⬅ slower
+      ease: "easeInOut", // ⬅ smoother
     },
   },
 };
 
+// Helper component for a single animated line
 const AnimatedLine = ({ text, className = "" }) => {
   return (
     <motion.div
@@ -40,7 +44,7 @@ const AnimatedLine = ({ text, className = "" }) => {
         <motion.span
           key={i}
           variants={letter}
-          className="inline-block pointer-events-none"
+          className="inline-block"
         >
           {char === " " ? "\u00A0" : char}
         </motion.span>
@@ -56,7 +60,6 @@ function Landing() {
   const [enableHover, setEnableHover] = useState(false);
 
   useEffect(() => {
-    // cursor outside viewport on load
     setMouse(-9999, -9999);
 
     const checkDevice = () => {
@@ -76,46 +79,38 @@ function Landing() {
       {enableHover ? (
         <MaskLayer>
           <div
-            className="relative flex justify-center top-1/2 left-1/2 
-              -translate-x-1/2 -translate-y-1/2 z-1"
+            onMouseEnter={enableHover ? () => setHover(true) : undefined}
+            onMouseLeave={enableHover ? () => setHover(false) : undefined}
+            className="relative flex justify-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-1 p-6 sm:p-10 md:p-16"
+            style={{ pointerEvents: "auto" }}
           >
-            <div
-              onMouseEnter={enableHover ? () => setHover(true) : undefined}
-              onMouseLeave={enableHover ? () => setHover(false) : undefined}
-              className="inline-block"
-            >
-              <div className="p-6 sm:p-10 md:p-16">
-                <div className="text-center">
-                  <AnimatedLine
-                    text="DIVYAM"
-                    className="text-[12px] sm:text-[14px] md:text-[16px] text-black mb-6"
-                  />
+            {/* ===== MASKED TEXT ===== */}
+            <div className="text-center">
+              <AnimatedLine
+                text="DIVYAM"
+                className="text-[12px] sm:text-[14px] md:text-[16px] text-black mb-6"
+              />
 
-                  <h1
-                    className="
-                      font-extrabold text-black
-                      leading-[42px] sm:leading-[60px] md:leading-[80px]
-                      text-[40px] sm:text-[64px] md:text-[100px]
-                    "
-                  >
-                    <AnimatedLine text="HIDING" />
-                    <AnimatedLine text="BAD" />
-                    <AnimatedLine text="CODE" />
-                    <AnimatedLine text="SINCE" />
-                    <AnimatedLine text="2024" />
-                  </h1>
-                </div>
-              </div>
+              <h1
+                className="
+                  font-extrabold text-black
+                  leading-[42px] sm:leading-[60px] md:leading-[80px]
+                  text-[40px] sm:text-[64px] md:text-[100px]
+                "
+              >
+                <AnimatedLine text="HIDING" />
+                <AnimatedLine text="BAD" />
+                <AnimatedLine text="CODE" />
+                <AnimatedLine text="SINCE" />
+                <AnimatedLine text="2024" />
+              </h1>
             </div>
           </div>
         </MaskLayer>
       ) : null}
 
-      <div
-        className="absolute top-1/2 left-1/2 
-          -translate-x-1/2 -translate-y-1/2 
-          text-center z-[1] scale-[1.75] sm:scale-100"
-      >
+      {/* ===== VISIBLE TEXT ===== */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-[1] scale-[1.75] sm:scale-100">
         <AnimatedLine
           text="DIVYAM"
           className="text-[12px] sm:text-[14px] md:text-[16px] text-[#C7B99B] mb-6"

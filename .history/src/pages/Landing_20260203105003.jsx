@@ -3,44 +3,56 @@ import { motion } from "framer-motion";
 import MaskLayer from "../components/MaskLayer";
 import useMouseStore from "../Store/useMouseStore";
 
+/* ===== Framer Motion Variants ===== */
 
-const line = {
+// Whole block
+const block = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.12,
+      staggerChildren: 0.25, // delay between lines
     },
   },
 };
 
+// Each line
+const line = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.04, // delay between letters
+    },
+  },
+};
+
+// Each letter
 const letter = {
   hidden: {
     opacity: 0,
-    y: 40,
+    y: 20,
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1.25,
-      ease: [0.16, 1, 0.3, 1],
+      duration: 0.4,
+      ease: "easeOut",
     },
   },
 };
 
+// Helper to split text into letters
 const AnimatedLine = ({ text, className = "" }) => {
   return (
     <motion.div
       className={`overflow-hidden ${className}`}
       variants={line}
-      initial="hidden"
-      animate="visible"
     >
       {text.split("").map((char, i) => (
         <motion.span
           key={i}
           variants={letter}
-          className="inline-block pointer-events-none"
+          className="inline-block"
         >
           {char === " " ? "\u00A0" : char}
         </motion.span>
@@ -56,7 +68,6 @@ function Landing() {
   const [enableHover, setEnableHover] = useState(false);
 
   useEffect(() => {
-    // cursor outside viewport on load
     setMouse(-9999, -9999);
 
     const checkDevice = () => {
@@ -76,45 +87,47 @@ function Landing() {
       {enableHover ? (
         <MaskLayer>
           <div
-            className="relative flex justify-center top-1/2 left-1/2 
-              -translate-x-1/2 -translate-y-1/2 z-1"
+            onMouseEnter={enableHover ? () => setHover(true) : undefined}
+            onMouseLeave={enableHover ? () => setHover(false) : undefined}
+            className="relative flex justify-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-1 p-6 sm:p-10 md:p-16"
+            style={{ pointerEvents: "auto" }}
           >
-            <div
-              onMouseEnter={enableHover ? () => setHover(true) : undefined}
-              onMouseLeave={enableHover ? () => setHover(false) : undefined}
-              className="inline-block"
+            {/* ===== MASKED TEXT ===== */}
+            <motion.div
+              className="text-center"
+              variants={block}
+              initial="hidden"
+              animate="visible"
             >
-              <div className="p-6 sm:p-10 md:p-16">
-                <div className="text-center">
-                  <AnimatedLine
-                    text="DIVYAM"
-                    className="text-[12px] sm:text-[14px] md:text-[16px] text-black mb-6"
-                  />
+              <AnimatedLine
+                text="DIVYAM"
+                className="text-[12px] sm:text-[14px] md:text-[16px] text-black mb-6"
+              />
 
-                  <h1
-                    className="
-                      font-extrabold text-black
-                      leading-[42px] sm:leading-[60px] md:leading-[80px]
-                      text-[40px] sm:text-[64px] md:text-[100px]
-                    "
-                  >
-                    <AnimatedLine text="HIDING" />
-                    <AnimatedLine text="BAD" />
-                    <AnimatedLine text="CODE" />
-                    <AnimatedLine text="SINCE" />
-                    <AnimatedLine text="2024" />
-                  </h1>
-                </div>
-              </div>
-            </div>
+              <h1
+                className="
+                  font-extrabold text-black
+                  leading-[42px] sm:leading-[60px] md:leading-[80px]
+                  text-[40px] sm:text-[64px] md:text-[100px]
+                "
+              >
+                <AnimatedLine text="HIDING" />
+                <AnimatedLine text="BAD" />
+                <AnimatedLine text="CODE" />
+                <AnimatedLine text="SINCE" />
+                <AnimatedLine text="2024" />
+              </h1>
+            </motion.div>
           </div>
         </MaskLayer>
       ) : null}
 
-      <div
-        className="absolute top-1/2 left-1/2 
-          -translate-x-1/2 -translate-y-1/2 
-          text-center z-[1] scale-[1.75] sm:scale-100"
+      {/* ===== VISIBLE TEXT ===== */}
+      <motion.div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-[1] scale-[1.75] sm:scale-100"
+        variants={block}
+        initial="hidden"
+        animate="visible"
       >
         <AnimatedLine
           text="DIVYAM"
@@ -134,7 +147,7 @@ function Landing() {
           <AnimatedLine text="SINCE" />
           <AnimatedLine text="2024" />
         </h1>
-      </div>
+      </motion.div>
     </div>
   );
 }

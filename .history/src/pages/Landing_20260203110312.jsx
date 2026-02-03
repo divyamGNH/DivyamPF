@@ -3,16 +3,19 @@ import { motion } from "framer-motion";
 import MaskLayer from "../components/MaskLayer";
 import useMouseStore from "../Store/useMouseStore";
 
+/* ===== Framer Motion Variants ===== */
 
+// Each line controls only its letters
 const line = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.12,
+      staggerChildren: 0.12, // slow letter delay
     },
   },
 };
 
+// Each letter rises from BELOW its final position
 const letter = {
   hidden: {
     opacity: 0,
@@ -28,6 +31,7 @@ const letter = {
   },
 };
 
+// Helper component for animated text line
 const AnimatedLine = ({ text, className = "" }) => {
   return (
     <motion.div
@@ -76,41 +80,39 @@ function Landing() {
       {enableHover ? (
         <MaskLayer>
           <div
+            onMouseEnter={enableHover ? () => setHover(true) : undefined}
+            onMouseLeave={enableHover ? () => setHover(false) : undefined}
             className="relative flex justify-center top-1/2 left-1/2 
-              -translate-x-1/2 -translate-y-1/2 z-1"
+              -translate-x-1/2 -translate-y-1/2 z-1 
+              "
+            style={{ pointerEvents: "auto" }}
           >
-            <div
-              onMouseEnter={enableHover ? () => setHover(true) : undefined}
-              onMouseLeave={enableHover ? () => setHover(false) : undefined}
-              className="inline-block"
-            >
-              <div className="p-6 sm:p-10 md:p-16">
-                <div className="text-center">
-                  <AnimatedLine
-                    text="DIVYAM"
-                    className="text-[12px] sm:text-[14px] md:text-[16px] text-black mb-6"
-                  />
+            {/* ===== MASKED TEXT ===== */}
+            <div className="text-center">
+              <AnimatedLine
+                text="DIVYAM"
+                className="text-[12px] sm:text-[14px] md:text-[16px] text-black mb-6"
+              />
 
-                  <h1
-                    className="
-                      font-extrabold text-black
-                      leading-[42px] sm:leading-[60px] md:leading-[80px]
-                      text-[40px] sm:text-[64px] md:text-[100px]
-                    "
-                  >
-                    <AnimatedLine text="HIDING" />
-                    <AnimatedLine text="BAD" />
-                    <AnimatedLine text="CODE" />
-                    <AnimatedLine text="SINCE" />
-                    <AnimatedLine text="2024" />
-                  </h1>
-                </div>
-              </div>
+              <h1
+                className="
+                  font-extrabold text-black
+                  leading-[42px] sm:leading-[60px] md:leading-[80px]
+                  text-[40px] sm:text-[64px] md:text-[100px]
+                "
+              >
+                <AnimatedLine text="HIDING" />
+                <AnimatedLine text="BAD" />
+                <AnimatedLine text="CODE" />
+                <AnimatedLine text="SINCE" />
+                <AnimatedLine text="2024" />
+              </h1>
             </div>
           </div>
         </MaskLayer>
       ) : null}
 
+      {/* ===== VISIBLE TEXT ===== */}
       <div
         className="absolute top-1/2 left-1/2 
           -translate-x-1/2 -translate-y-1/2 
