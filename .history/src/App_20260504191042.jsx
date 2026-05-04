@@ -5,7 +5,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import About from "./pages/About.jsx";
 import Projects from "./pages/Projects.jsx";
-import Experience from "./pages/Experience.jsx";
+import ExperienceLanding from "./pages/experience.jsx";
 
 import useMouseTracking from "./Hooks/useMouseTracking.js";
 import CursorFollower from "./components/CursorFollower.jsx";
@@ -39,7 +39,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/experiences" element={<Experience/>} />
+        <Route path="/experiences" element={<ExperienceLanding />} />
       </Routes>
 
       <Footer />

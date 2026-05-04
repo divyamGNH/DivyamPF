@@ -179,7 +179,7 @@ const ProjectLanding = () => {
               "Real-time deployment monitoring and logs",
               "Scalable infrastructure with containerized services",
             ]}
-            stack="AWS · Node.js · Docker  · GitHub Actions · React"
+            stack="React · Tailwind CSS · Framer Motion · Node.js · Docker"
             liveLink="-"
             githubLink="https://github.com/divyamGNH/CloudPloy"
             onUnavailableClick={() => setShowPopup(true)}
