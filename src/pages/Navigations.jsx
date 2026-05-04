@@ -19,7 +19,7 @@ const Navigations = () => {
       <div className="fixed flex flex-col tracking-tighter right-5 top-5 gap-0.8 z-50 text-md">
         <a href="/">HOME</a>
         <a href="/about">ABOUT</a>
-        <a href="/experience">EXPERIENCE</a>
+        <a href="/experiences">EXPERIENCE</a>
         <a href="/projects">PROJECTS</a>
         <a onClick={ handleScroll}>
           CONTACT
