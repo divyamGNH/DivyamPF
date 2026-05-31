@@ -24,7 +24,7 @@ const Navigations = () => {
         <a onClick={ handleScroll}>
           CONTACT
         </a>
-        <a href="./Divyam_Resume.pdf" target="_blank" rel="noopener norefferer">RESUME</a>
+        <a href="./DivyamKResume.pdf" target="_blank" rel="noopener norefferer">RESUME</a>
       </div>
     </div>
   );
