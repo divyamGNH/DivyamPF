@@ -9,10 +9,20 @@ import Experience from "./pages/Experience.jsx";
 
 import useMouseTracking from "./Hooks/useMouseTracking.js";
 import CursorFollower from "./components/CursorFollower.jsx";
+import Loader from "./components/Loader.jsx";
 import Footer from "./pages/Footer.jsx";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const [enableCursor, setEnableCursor] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const checkDevice = () => {
@@ -33,6 +43,10 @@ function App() {
 
   return (
     <Router>
+      <AnimatePresence>
+        {loading && <Loader />}
+      </AnimatePresence>
+
       {enableCursor && <CursorFollower />}
 
       <Routes>

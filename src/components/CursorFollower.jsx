@@ -2,8 +2,7 @@ import { motion } from 'framer-motion';
 import useMouseStore from '../Store/useMouseStore.js';
 
 const CursorFollower = () => {
-  const x = useMouseStore(state => state.x);
-  const y = useMouseStore(state => state.y);
+  const { x, y, hasMoved } = useMouseStore();
   
   return (
     <>
@@ -17,6 +16,7 @@ const CursorFollower = () => {
           backgroundColor: '#E74C3C',
           pointerEvents: 'none',
           zIndex: 1,
+          opacity: hasMoved ? 1 : 0,
           // mixBlendMode: 'difference',
         }}
         animate={{
@@ -25,9 +25,10 @@ const CursorFollower = () => {
         }}
         transition={{
           type: 'spring',
-          stiffness: 500,
+          stiffness: 300,
           damping: 28,
           mass: 0.5,
+          opacity: { duration: 0.2 },
         }}
       />
     </>

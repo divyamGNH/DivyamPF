@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import useMouseStore from "../Store/useMouseStore.js";
 
 const MaskLayer = ({ children }) => {
-  const { x, y, hover } = useMouseStore();
+  const { x, y, hover, hasMoved } = useMouseStore();
 
   return (
     <motion.div
@@ -13,11 +13,14 @@ const MaskLayer = ({ children }) => {
       animate={{
         WebkitMaskPosition: `${x - (hover ? 200 : 20)}px ${y - (hover ? 200 : 20)}px`,
         MaskPosition: `${x - (hover ? 200 : 20)}px ${y - (hover ? 200 : 20)}px`,
-        WebkitMaskSize: hover ? "400px" : "40px",
+        WebkitMaskSize: !hasMoved ? "0px" : (hover ? "400px" : "40px"),
       }}
       transition={{
+        backgroundColor: {
+          duration: 100,
+        },
         WebkitMaskSize: {
-          duration: hover ? 0.35 : 0.45, // slower shrink
+          duration: hover ? 0.25 : 0.15, // slower shrink
           ease: hover ? "easeOut" : "easeInOut",
         },
         default: {

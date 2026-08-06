@@ -56,9 +56,6 @@ function Landing() {
   const [enableHover, setEnableHover] = useState(false);
 
   useEffect(() => {
-    // cursor outside viewport on load
-    setMouse(-9999, -9999);
-
     const checkDevice = () => {
       const isLargeScreen = window.innerWidth >= 768;
       const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
