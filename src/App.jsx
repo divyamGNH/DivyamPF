@@ -15,14 +15,23 @@ import { AnimatePresence } from "framer-motion";
 
 function App() {
   const [enableCursor, setEnableCursor] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => {
+    // Check if the user has already seen the intro this session
+    return !sessionStorage.getItem("hasSeenIntro");
+  });
 
   useEffect(() => {
+    // If they've already seen it, we don't need the timer at all
+    if (!loading) return;
+
     const timer = setTimeout(() => {
       setLoading(false);
+      // Mark as seen for this session
+      sessionStorage.setItem("hasSeenIntro", "true");
     }, 2000);
+    
     return () => clearTimeout(timer);
-  }, []);
+  }, [loading]);
 
   useEffect(() => {
     const checkDevice = () => {
