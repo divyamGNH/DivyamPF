@@ -53,7 +53,7 @@ function ExperienceCard({
       </div>
 
       {/* DETAILS */}
-      <ul className="space-y-2 text-sm opacity-80 mb-6 max-w-xl">
+      <ul className="space-y-2 text-sm opacity-80 mb-6 max-w-3xl">
         {details.map((item, i) => (
           <li key={i}>– {item}</li>
         ))}
@@ -94,11 +94,11 @@ const ExperienceLanding = () => {
           company="Confrnce"
           duration="April 2026 – Present"
           details={[
-            "Built a production-grade Selective Forwarding Unit (SFU) in Go using Pion WebRTC with a dual PeerConnection architecture to avoid blocking renegotiations.",
-            "Decoupled the SFU into an independently deployable, horizontally scalable microservice using gRPC for low-latency communication.",
-            "Eliminated unauthenticated node attachment to the media cluster by gating gRPC handshakes behind mTLS and per-node X.509 certificate validation.",
-            "Built the Next.js video calling client implementing adaptive network optimization and seamless switching between SFU and mesh P2P topologies.",
-            "Implemented cloud recording support via AWS S3 compatible object storage for scalable recording and playback of real-time sessions.",
+            "Built a production-grade SFU in Go with Pion WebRTC, using dual PeerConnections to avoid blocking renegotiations.",
+            "Decoupled the SFU into a horizontally scalable gRPC microservice on AWS, implementing custom load balancing and scheduling.",
+            "Secured media cluster attachment by gating gRPC handshakes behind mTLS and per-node X.509 certificate validation.",
+            "Built the Next.js video calling client with adaptive network optimization and seamless SFU-to-mesh P2P switching.",
+            "Implemented cloud recording via AWS S3-compatible storage for scalable session recording and playback.",
           ]}
           stack="Go · Pion · WebRTC · React · TypeScript · gRPC · S3 · Next.js"
           linkedinLink="https://www.linkedin.com/company/confrnce"
