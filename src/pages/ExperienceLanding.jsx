@@ -90,15 +90,17 @@ const ExperienceLanding = () => {
         <ExperienceCard
           status="CURRENT"
           statusColor="bg-green-500"
-          role="Full Stack Intern"
-          company="BrandFoundry Pvt Ltd"
+          role="SDE Intern"
+          company="Confrnce"
           duration="April 2026 – Present"
           details={[
-            "Building a complete SFU on Pion",
-            "Built a Mesh P2P architecture for a complete conference call",
-            "Helped building frontend for he platform",
+            "Built a production-grade Selective Forwarding Unit (SFU) in Go using Pion WebRTC with a dual PeerConnection architecture to avoid blocking renegotiations.",
+            "Decoupled the SFU into an independently deployable, horizontally scalable microservice using gRPC for low-latency communication.",
+            "Eliminated unauthenticated node attachment to the media cluster by gating gRPC handshakes behind mTLS and per-node X.509 certificate validation.",
+            "Built the Next.js video calling client implementing adaptive network optimization and seamless switching between SFU and mesh P2P topologies.",
+            "Implemented cloud recording support via AWS S3 compatible object storage for scalable recording and playback of real-time sessions.",
           ]}
-          stack="Golang · Pion · NEXT"
+          stack="Go · Pion · WebRTC · React · TypeScript · gRPC · S3 · Next.js"
           linkedinLink="https://www.linkedin.com/company/confrnce"
         />
 
